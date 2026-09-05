@@ -850,4 +850,36 @@
 //     cout<<*s1.marks;
 // }
 
+// POINTER TO OBJECT :
+
+#include <iostream>
+using namespace std;
+class Student
+{
+    public:
+    int marks;
+    void display()
+    {
+        cout<<marks<<endl;
+    }
+    void greet()
+    {
+        cout<<"Heelow"<<endl;
+    }
+};
+int main()
+{
+    Student s1;
+    Student *p = &s1;
+    p->marks = 100;
+    p->greet();
+    p->display();
+    Student *s2 = new Student();
+    s2->marks = 200;
+    s2->greet();
+    s2->display();
+}
+// THIS POINTER : inside a non static member function this is a pointer to a current object.
+
+
 
