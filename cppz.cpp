@@ -852,34 +852,127 @@
 
 // POINTER TO OBJECT :
 
-#include <iostream>
-using namespace std;
-class Student
-{
-    public:
-    int marks;
-    void display()
-    {
-        cout<<marks<<endl;
-    }
-    void greet()
-    {
-        cout<<"Heelow"<<endl;
-    }
-};
-int main()
-{
-    Student s1;
-    Student *p = &s1;
-    p->marks = 100;
-    p->greet();
-    p->display();
-    Student *s2 = new Student();
-    s2->marks = 200;
-    s2->greet();
-    s2->display();
-}
+// #include <iostream>
+// using namespace std;
+// class Student
+// {
+    
+//     int marks;
+//     public:
+//     Student(int marks)
+//     {
+//         this->marks = marks;
+//     }
+//     Student& increaseMArk(int x)
+//     {
+//         this->marks += x;
+//         return *this;
+//     }
+//     void display()
+//     {
+//         cout<<this->marks<<endl;
+//     }
+//     void greet()
+//     {
+//         cout<<"Heelow"<<endl;
+//     }
+// };
+// int main()
+// {
+
+//     Student *s1 = new Student(50); 
+//     Student *s2 = new Student(50); 
+//     s1->increaseMArk(20); 
+
+//     if (*s1 == *s2) 
+//     {
+//          cout << "Equal" << endl; 
+//     } 
+//     else 
+//     { 
+//         cout << "Not Equal" << endl;
+//     }
+
+    // Student s1(100);
+    // Student *p = &s1;
+   
+    // p->greet();
+    // p->display();
+    // Student *s2 = new Student(200);
+    // s2->greet();
+    // s2->display();
+
+// }
 // THIS POINTER : inside a non static member function this is a pointer to a current object.
 
+// #include <iostream>
+// using namespace std;
+// class Employee
+// {
+//     int age;
+//     string name;
+//     int salary;
+//     public:
+//     Employee(int age,string name,int salary)
+//     {
+//         this->age = age;
+//         this->name = name;
+//         this->salary = salary;
+//     }
+//     void addbonus(int bonus)
+//     {
+//         this->salary += bonus;
+//     }
+//     void display()
+//     {
+//         cout<<"Name: "<<this->name<<endl;
+//         cout<<"Age: "<<this->age<<endl;
+//         cout<<"Salary: "<<this->salary<<endl;
+//     }
+// };
+// int main()
+// {
+//     Employee e1(25,"Vishal",50000);
+//     e1.addbonus(5000);
+//     e1.display();
+// }
 
+// ARRAY OF OBJECT AND CONSTRUCTORS :
+
+// #include <iostream>
+// using namespace std;
+// class Student
+// {
+//     public:
+//     int marks;
+//     Student()
+//     {
+
+//     }
+//     Student(int marks)
+//     {
+//         this->marks = marks;
+//     }
+//     void display()
+//     {
+//         this->marks = marks;
+//     }
+
+// };
+// int main()
+// {
+//     Student arr[5] ;
+//     for (int i = 0; i < 5; i++)
+//     {
+//         int marks;
+//         cin>>marks;
+//         Student s(marks);
+//         arr[i] = s;
+//     }
+//     for(int i = 0; i < 5; i++)
+//     {
+//         cout<<arr[i].marks<<endl;
+//     }
+
+// }
 
