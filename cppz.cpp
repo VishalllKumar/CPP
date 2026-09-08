@@ -976,3 +976,143 @@
 
 // }
 
+// STRINGS : STRING ARE SEQUENCE OF CHARACTERS AND THEY ARE MUTABLE IN CPP
+// #include<iostream>
+// using namespace std;
+// int main()
+// {
+//     char nam[] = "Vishal";
+//     cout<<nam<<endl;
+
+//     string name = "Vishal";
+//     cout<<name<<endl;
+
+//     for(int i = 0; i<name.length(); i++)
+//     {
+//         cout<<name[i]<<" ";
+//     }
+//     string name1;
+//     cout<<"Enter your name: ";
+//     getline(cin,name1);
+//     cout<<name1<<endl;
+    
+//     int age;
+//     cout<<"Enter your age: ";
+//     cin>>age;
+//     cout<<age;
+// }
+
+// STRING OPERATIONS : 1) LENGTH() 2) SIZE() 3) EMPTY() 4) CLEAR() 5) APPEND() 6) PUSH_BACK() 7) POP_BACK() 8) SUBSTR() 9) FIND() 10) COMPARE() 11) CONCATINATION
+
+
+
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+    // string fname = "Vishal";
+    // string lname = "Kumar";
+    // cout<<fname.length()<<endl;
+    // cout<<fname.size()<<endl;
+    // cout<<fname.empty()<<endl; // give output in 0s or 1s (false/true)
+    // cout<<fname<<endl;
+    // cout<<fname+" "+lname<<endl;
+
+    // cout<<fname.front()<<endl;
+    // cout<<fname.back()<<endl;
+
+    // fname.clear();
+    // cout<<fname<<endl;
+
+    // fname.append("Vishal");
+    // cout<<fname<<endl;
+
+    // fname.append(lname);
+    // cout<<fname<<endl;
+
+    // fname.push_back('V');
+    // cout<<fname<<endl;
+
+    // for (int i = 0 ; i < 5 ; i++ )
+    // {
+    //     char ch;
+    //     cin>>ch;
+    //     fname.push_back(ch);
+    // }
+    // cout<<fname<<endl;
+
+    // fname.pop_back();
+    // cout<<fname<<endl;
+
+    // cout<<fname[4]<<endl;
+    // cout<<fname.substr(2,1)<<endl; // syntax fname.substr(start,length)
+
+    // cout<<fname.find("sh");
+    // string a = "run";
+    // string b = "ran";
+    // if(a<b)
+    // {
+    //     cout<<"a comes first";
+    // }
+    // if a is smaller its give negative number if larger it will give positive if its 0 it will give equal
+// }
+
+
+// #include<iostream>
+// using namespace std;
+// class Student
+// {
+//     public:
+//     int marks;
+// };
+// int main()
+// {
+    
+    // string a = "Hellooo";
+    // a[3] = 'd';
+    // a[5] = 'a';
+    // a[6] = 'e';
+    // cout<<a;
+
+    // string s = "I love C++ programming";
+    // cout<<s.find("C++")<<endl;
+    // cout<<s.substr(7,3)<<endl;
+    // cout<<s.insert(10,", JAVA");
+
+    // cout<<s.replace(7,3,"Python");  //s.replace(index,length,value)
+//     Student arr[3];
+//     arr[0].marks = 10; 
+//     arr[1].marks = 20; 
+//     arr[2].marks = 30; 
+//     // cout<<arr[0].marks;
+
+//     Student *p = arr;
+//     cout<<(p)->marks<<endl; // while not using pointer use '->'.
+//     cout<<(*p).marks<<endl; // while using pointer use ','.  
+//     cout<<(p+1)->marks<<endl;
+
+// }
+
+// MULTIDIMENSIONAL ARRAY 
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int arr[3][3] = {
+        {1,2,3},
+        {4,5,6},
+        {7,8,9}
+    };
+    int sum = 0;
+    for(int i = 0 ; i < 3 ; i++)
+    {
+        for(int j = 0 ; j < 3 ; j++)
+        {
+            // cout<<arr[i][j];
+            sum = sum + arr[i][j];
+        }
+        // cout<<endl;
+    }
+    cout<<sum<<endl;
+}
