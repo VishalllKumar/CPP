@@ -1119,5 +1119,124 @@
 //     // cout<<sum<<endl;
 // }
 
+// #include <iostream>
+// using namespace std;
 
+// class Employee {
+//     int id;
+//     string name;
+//     float salary;
 
+// public:
+//     Employee() {
+//         id = 12501063;
+//         name = "Vishal";
+//         salary = 9999999;
+//     }
+
+//     Employee(int i, string n) {
+//         id = i;
+//         name = n;
+//         salary = 0;
+//     }
+
+//     Employee(int id, string name, float salary) {
+//         id = id;
+//         name = name;
+//         salary = salary;
+//     }
+
+//     void display() {
+//         cout << "ID: " << id << endl;
+//         cout << "Name: " << name << endl;
+//         cout << "Salary: " << salary << endl;
+//     }
+// };
+
+// int main() {
+//     Employee e1;                 
+//     Employee e2(101, "Fakrul");     
+//     Employee e3(102, "mosssiii", 25000); 
+
+//     e1.display();
+//     e2.display();
+//     e3.display();
+
+//     return 0;
+// }
+    // class Student
+    // {
+    //     int marks;
+    //     int rollNo;
+    //     public:
+    //     Student()
+    //     {
+    //     marks = 1;
+    //     rollNo = 100;
+    //     cout<<"Default Parameter";
+    //     }
+    //     Student(int rollNo,int marks)
+    //     {
+    //         this->marks = marks;
+    //         this->rollNo = rollNo;
+    //     }
+    //     void display()
+    //     {
+    //         cout<<marks<<" "<<rollNo<<endl;
+    //     }
+    // };
+
+    // class A{
+    //     int x;
+    //     public:
+    //     A()
+    //     {
+    //         cout<<"Default"<<endl;
+    //     }
+    //     A(int x = 10)
+    //     {
+    //         cout<<"Para"<<endl;
+    //     }
+    // };
+    // int main()
+    // {
+        // A.a1();
+        // Student s;
+        // Student s2(100,200);
+        // s.display();
+        // s2.display();
+    // }
+
+// FILES :
+// 1) TEXT FILE : human readble , .txt !!
+// 2) BINARY FILE : machine readble , .bin !!
+
+// classes for filess:
+// 1) #include <fstream> : both reading and writing
+// 2) ofstream : write
+// 3) ifstream : read
+
+// #include <iostream>
+// #include <fstream>
+// using namespace std;
+// int main()
+// {
+    // fstream a;
+    // a.open("data.txt");
+    // ifstream b;
+    // b.open("data.txt");
+
+    // if(!b)
+    // {
+    //     cout<<"file is not found";
+    // }
+    // else
+    // {
+    //     cout<<"file is there";
+    // }
+
+    // ofstream a("studentdata.txt");
+    // a<<"Name : Vishal Kumar , id : 12501063 "<<endl;
+    // a<<"Name : Fakrul Islam , id : 12506377 "<<endl;
+    // a.close();
+// }
