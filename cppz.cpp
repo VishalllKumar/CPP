@@ -1281,18 +1281,42 @@
 // ios::binary --> open in binary mode 
 
 
+// #include<iostream>
+// #include<fstream>
+// using namespace std;
+// int main()
+// {
+//     fstream file("XYZ.txt",ios::in | ios::app);
+//     file<<"VISHAL KUMAR"<<endl;
+//     char ch;
+//     while(file.get(ch))
+//     {
+//     cout<<ch;
+//     }
+//     file.close();
+//     return 0;   
+// }
+
 #include<iostream>
 #include<fstream>
 using namespace std;
 int main()
 {
-    fstream file("XYZ.txt",ios::in | ios::app);
-    file<<"VISHAL KUMAR"<<endl;
-    char ch;
-    while(file.get(ch))
+    // ofstream f("name.txt");
+    // f.put('H');
+    // f.put('E');
+    // f.put('L');
+    // f.put('O');
+    // f.put('W');
+
+    ifstream f("name.txt");
+    string name;
+    // f>>name;
+    // char ch;
+    while(getline(f,name))
     {
-    cout<<ch;
+        cout<<name;
     }
-    file.close();
-    return 0;   
+    cout<<name;
+    
 }
