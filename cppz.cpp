@@ -1220,22 +1220,79 @@
 // using namespace std;
 // int main()
 // {
-    // fstream a;
-    // a.open("data.txt");
-    // ifstream b;
-    // b.open("data.txt");
+//     fstream a;
+//     a.open("data.txt");
+//     ifstream b;
+//     b.open("data.txt");
 
-    // if(!b)
-    // {
-    //     cout<<"file is not found";
-    // }
-    // else
-    // {
-    //     cout<<"file is there";
-    // }
+//     if(!b)
+//     {
+//         cout<<"file is not found";
+//     }
+//     else
+//     {
+//         cout<<"file is there";
+//     }
 
-    // ofstream a("studentdata.txt");
-    // a<<"Name : Vishal Kumar , id : 12501063 "<<endl;
-    // a<<"Name : Fakrul Islam , id : 12506377 "<<endl;
-    // a.close();
+//     ofstream a("studentdata.txt");
+//     a<<"Name : Vishal Kumar , id : 12501063 "<<endl;
+//     a<<"Name : Fakrul Islam , id : 12506377 "<<endl;
+//     a.close();
+
 // }
+
+
+// #include <iostream>
+// #include <fstream>
+// using namespace std;
+
+// int main() {
+
+//     ofstream file("students.txt");
+
+//     string name, address;
+//     int marks;
+
+//     for (int i = 1; i <= 4; i++) {
+
+//         cout << "Enter details of Student " << i << endl;
+
+//         cout << "Name: ";
+//         getline(cin >> ws, name);
+
+//         cout << "Address: ";
+//         getline(cin, address);
+
+//         cout << "Marks: ";
+//         cin >> marks;
+
+//         file << "Student " << i << endl;
+//         file << "Name: " << name << endl;
+//         file << "Address: " << address << endl;
+//         file << "Marks: " << marks << endl;
+//         file << "----------------------" << endl;   
+//     }
+//     file.close();
+// }
+
+// ios::in --> open for reading        
+// ios::out --> open for writting      
+// ios::app --> append data at the end 
+// ios::binary --> open in binary mode 
+
+
+#include<iostream>
+#include<fstream>
+using namespace std;
+int main()
+{
+    fstream file("XYZ.txt",ios::in | ios::app);
+    file<<"VISHAL KUMAR"<<endl;
+    char ch;
+    while(file.get(ch))
+    {
+    cout<<ch;
+    }
+    file.close();
+    return 0;   
+}
