@@ -1297,26 +1297,394 @@
 //     return 0;   
 // }
 
-#include<iostream>
-#include<fstream>
-using namespace std;
-int main()
-{
-    // ofstream f("name.txt");
-    // f.put('H');
-    // f.put('E');
-    // f.put('L');
-    // f.put('O');
-    // f.put('W');
+// #include<iostream>
+// #include<fstream>
+// using namespace std;
+// int main()
+// {
+//     // ofstream f("name.txt");
+//     // f.put('H');
+//     // f.put('E');
+//     // f.put('L');
+//     // f.put('O');
+//     // f.put('W');
 
-    ifstream f("name.txt");
-    string name;
-    // f>>name;
-    // char ch;
-    while(getline(f,name))
-    {
-        cout<<name;
-    }
-    cout<<name;
+//     ifstream f("name.txt");
+//     string name;
+//     // f>>name;
+//     // char ch;
+//     while(getline(f,name))
+//     {
+//         cout<<name;
+//     }
+//     cout<<name;
     
-}
+// }
+
+//seek() -> takes to the particular point. 
+//tell() -> where is your pointer.
+//seekg() -> read/get.
+//tellg() -> read/get.
+//seekp() -> put/write.
+//tellp() -> put/write.
+
+
+// #include<iostream>
+// #include<fstream>
+// using namespace std;
+// int main()
+// {
+    // ifstream fin("name.txt");
+    // cout<<"Position = "<<fin.tellg()<<endl;
+    // char ch;
+    // fin.get(ch);
+    // cout<<ch;
+    // cout<<"Position = "<<fin.tellg()<<endl;
+    // fin.seekg(3);
+    // char ch;
+    // while(fin.get(ch))
+    // {
+    //     cout<<ch<<endl;
+    // }
+    // cout<<ch<<endl;
+    // fin.close();
+
+    // ofstream fout("name.txt");
+    // cout<<"Position = "<<fout.tellp()<<endl;
+    // fout<<"Vishal";
+    // cout<<"position = "<<fout.tellp()<<endl;
+//     fout.seekp(8);
+//     fout<<"hello";
+//     fout.close();
+// }
+
+// #include<iostream>
+// #include<fstream>
+// using namespace std;
+// class Student{
+//     public:
+//     string name;
+//     int rollNo;
+//     int marks;
+//     void input()
+//     {
+//         cout<<"enter name: "<<endl;
+//         cin>>name;
+//         cout<<"enter roll no: ";
+//         cin>>rollNo;
+//         cout<<"enter marks :"<<endl;
+//         cin>>marks;
+//     }
+//     void display()
+//     {
+//         cout<<name<<" "<<rollNo<<" "<<marks;
+//     }
+// };
+
+// int main()
+// {
+    // int number = 500 ;
+    // ofstream fout("number.dat",ios::binary);
+    // fout.write((char*)&number,sizeof(number));
+    // fout.close();
+    // int newNumber;
+    // ifstream fin("number.dat",ios::binary);
+    // fin.read((char *)&newNumber,sizeof(newNumber));
+    // cout<<newNumber;
+    // fin.close();
+    // Student s;
+    // ofstream("student.dat",ios::binary);
+    // cout<<"enter the details for three students : "<<endl;
+
+    // for(int i = 0 ; i < 3 ; i++)
+    // {
+    //     s.input();
+    //     fout.write((char*)&s,sizeof(s));
+
+    // }
+    // fout.close();
+    // ifstream fin("Student.dat",ios::binary);
+    // cout<<"Details of all students: "<<endl;
+    // while(fin.read(char*)&s,sizeof(s))
+    // {
+    //     s.display();
+//     // }
+//     int studentNumber;
+//     cout<<"give me the number: "<<endl;
+//     cin>>studentNumber;
+
+//     long long pos = (studentNumber -1 )*&sizeof(Student);
+//     fin.seekg(pos);
+//     fin.read(char*)&s,sizeof(s);
+//     if (!fin)
+//     {
+//         cout<<"details"<<endl;
+//         s.display();
+//     }
+//     else
+//     {
+//         cout<<"file not exist";
+//     }
+// }
+
+
+
+
+// #include <iostream>
+// using namespace std;
+
+// class person{
+//     protected:
+//         int height  = 168;
+//         int weight = 46;
+//         public:
+//         void display(){
+//             cout << "height: "<< height;
+//         }
+// };
+// class employee: public person{
+//     public:
+//     void show(){
+//         cout << "height: "<< height<<" weight"<< weight;
+//     }
+// };
+// class manager:public employee {
+//     public:
+//     void BMI(){
+//         cout << "BMI: "<< (weight*weight)/height;
+//     }
+// };
+// // class vehicle {
+// // protected:
+// //     int wheelSize = 3;
+// //     int seats = 2;
+
+// // public:
+// //     void display() {
+// //         cout << "size of tyres: " << wheelSize
+// //              << " seats: " << seats << endl;
+// //     }
+// // };
+
+// // class car : public vehicle {
+// // public:
+// //     void show() {
+// //         cout << wheelSize << " " << seats << endl;
+// //     }
+// // };
+
+// int main() {
+//     // vehicle v;
+//     // v.display();       
+
+//     // car c;
+//     // c.show();        
+//     manager m1;
+//     m1.BMI();
+
+// }
+
+
+// #include<iostream>
+// using namespace std;
+
+// class Animal{
+//     public:
+//     void eat(){
+//         cout<<"Animal is eating"<<endl;
+//     }
+// };
+// class Dog:public Animal{
+//     public:
+//     void bark(){
+//         cout<<"Dog is barking"<<endl;
+//     }
+// };
+// class cat:public Animal{
+//     public:
+//     void meow(){
+//         cout<<"Cat is meowing"<<endl;
+//     }
+// };
+// class Dainasourus:public Animal{
+//     public:
+//     void roar(){
+//         cout<<"Dainasourus is roaring"<<endl;
+//     }
+// };
+// int main(){
+//     // Manager m1;
+//     // m1.showPerson();
+//     // m1.showEmp();
+//     // m1.showManager();
+
+//     // Child c;
+//     // c.Childprop();
+//     //Fatherprop();
+//     //Motherprop();
+
+   
+
+//     Dog d;
+//     d.eat();
+//     d.bark();
+
+//     cat c;
+//     c.eat();
+//     c.meow();
+
+//     Dainasourus ds;
+//     ds.eat();
+//     ds.roar();
+
+//     return 0;
+
+// }
+
+// MIXED INHERITENCE: 
+
+// #include<iostream>
+// using namespace std;
+// class Vehicle{
+//     public:
+//     Vehicle(){
+//         cout<<"IN vehicle"<<endl;
+//     }
+//     ~Vehicle(){
+//         cout<<"v destructor"<<endl;
+//     }
+//     void show(){
+//     cout<<"I am in vehicle";
+//     }
+// };
+
+// class Bike : public Vehicle{
+//     public:
+//      Bike(){
+//         cout<<"IN Bike"<<endl;
+//     }
+//     ~Bike(){
+//         cout<<"Bike destructor"<<endl;
+//     }
+//     void bikediplay(){
+//         cout<<"I am in bike";
+//     }
+// };
+
+// class BMWBike : public Bike{
+//     public:
+//      BMWBike(){
+//         cout<<"IN BMWBike"<<endl;
+//     }
+//     ~BMWBike(){
+//         cout<<"BMWBike destructor"<<endl;
+//     }
+//     void BMWDis(){
+//         cout<<"I am in BMWBike";
+//     }
+// };
+// class BMWHigh: public BMWBike{
+//     public:
+//      BMWHigh(){
+//         cout<<"IN BMWHigh"<<endl;
+//     }
+//     ~BMWHigh(){
+//         cout<<"BMWHigh des"<<endl;
+//     }
+// };
+
+// int main(){
+//     BMWHigh b1;
+
+// }
+
+// // AMBIGUITY IN INHERITENCE :
+// #include<iostream>
+// using namespace std;
+// class Father{
+//     public: 
+//     void show(){
+//         cout<<"Father"<<endl;
+//     } 
+// };
+// class Mother{
+//     public: 
+//     void show(){
+//         cout<<"Mother"<<endl;
+//     } 
+// };
+
+// class Child: public Father, public Mother{
+
+// };
+// class A {
+// public:
+//     int x = 10;
+// };
+
+// class B {
+// public:
+//     int x = 20;
+// };
+
+// class C : public A, public B {
+
+// };
+
+
+
+
+
+// // Diamond probem-->>
+
+// class Person {
+//     public:
+//     int age = 25;
+// };
+// // virtual case classes 
+// class Student : virtual public Person {
+
+// };
+
+// class Employee : virtual public Person {
+
+// };
+
+
+// class Manager: public Student, public Employee{
+
+// };
+
+
+// int main(){
+
+//     Manager m;
+
+//     cout<<m.age;
+
+//     // cout<<m.Student::age;
+//     // cout<<m.Employee::age;
+
+//     // Child c;
+//     // c.Father::show();
+//     // c.Mother::show();
+
+//     // C f;
+
+//     // cout<<f.A::x;
+//     // cout<<f.B::x;
+
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
