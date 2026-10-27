@@ -1677,14 +1677,123 @@
 // }
 
 
+//minus operator overload:
+
+// #include<iostream>
+// using namespace std;
+// class Number{
+//     int val;
+
+//     public:
+//     Number(int v){
+//         val = v;
+//     }
+
+//     Number operator -(){
+//         Number ans(-val);
+//         return ans;
+//     }
+
+//     void operator ++(){
+//         // ++this->val; // both ways are same
+//         ++val;
+//     }
+//     void operator --(){
+//         // --this->val; // both ways are same
+//         --val;
+//     }
 
 
+//     //postfix ++
+//     Number operator ++(int){
+//         Number ans = *this;
+//         val++;
+//         return ans;
+//     }
+//     void display(){
+//         cout<<val<<endl;
+//     }
+// };
+// int main(){
+//     Number n1(20);
 
+//     // Number n2 = -n1;
+//     // n2.display();
+//     // n1.display();
+    
 
+//     // ++n1;
 
+//     // n1.display();
 
+//     // --n1;
 
+//     // --n1;
+//     // n1.display();
 
+//     Number n2 = n1++;
+//     n1.display();
+//     n2.display();
+// }
 
+// CONVERSION : 
 
+// #include<iostream>
+// using namespace std;
+// class Number{
+//     int val;
+//     public:
+//     // explicit Number(int val)
+//     // {
+//     //     this->val = val;
+//     // }
+//     operator int()
+//     {
+//         cout<<"val = "<<val<<endl;
+//     }
+//     void display()
+//     {
+//         cout<<"Val = "<<val<<endl;
+//     }
+// };
 
+// int main()
+// {
+//     // int a = 10;
+//     // Number n = a;
+//     // int b = 20;
+//     // n = b;
+//     // n.display();
+//     // n = 500;
+//     // n.display();
+//     Number n1(25);
+//     // n1.display();
+//     int a = n1;
+//     cout<<a;
+    
+// }
+
+// example 2:
+
+// #include <iostream>
+// using namespace std;
+// class tame {
+//     int time; 
+// public:
+//     tame(int time) {
+//         this->time = time;
+//     }
+//     operator int() {
+//         return time / 60;
+//     }
+//     void display() {
+//         cout << "Time = " << time << " minutes" << endl;
+//     }
+// };
+// int main() {
+//     tame t1(120);  
+//     t1.display();
+//     int hours = t1;  
+//     cout << "Time in hours = " << hours << " hours" << endl;
+//     return 0;
+// }
